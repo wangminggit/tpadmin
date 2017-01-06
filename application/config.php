@@ -7,7 +7,6 @@
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
-// | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
@@ -84,7 +83,7 @@ return [
     // URL参数方式 0 按名称成对解析 1 按顺序解析
     'url_param_type' => 0,
     // 是否开启路由
-    'url_route_on' => FALSE,
+    'url_route_on' => true,
     // 是否强制使用路由
     'url_route_must' => false,
     // 域名部署
@@ -190,7 +189,7 @@ return [
         // cookie 名称前缀
         'prefix' => '',
         // cookie 保存时间
-        'expire' => 60 * 60 * 24 * 7,
+        'expire' => 60 * 60 * 3 * 1,
         // cookie 保存路径
         'path' => '/',
         // cookie 有效域名
@@ -208,7 +207,24 @@ return [
         'var_page' => 'page',
         'list_rows' => 15,
     ],
-    'encry_key' => 'zxcms',
+    'encry_key' => 'wm',
+    //验证码配置
+    'captcha'  => [
+        // 验证码字符集合
+        'codeSet'  => '2345678abcdefhijkmnpqrstuvwxyzABCDEFGHJKLMNPQRTUVWXY',
+        // 验证码字体大小(px)
+        'fontSize' => 16,
+        // 是否画混淆曲线
+        'useCurve' => true,
+        // 验证码图片高度
+        'imageH'   => 30,
+        // 验证码图片宽度
+        'imageW'   => 100,
+        // 验证码位数
+        'length'   => 4,
+        // 验证成功后是否重置
+        'reset'    => true
+    ],
 ];
 
 

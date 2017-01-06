@@ -2,32 +2,33 @@
 
 namespace application\index\controller;
 
-class IndexController {
+use application\lib\utils\UtilsNet;
+use think\Controller;
+use think\Loader;
 
-    public function index() {
-        echo 'index.';
+//use extend\utils\UtilsNet;
+
+class IndexController extends Controller
+{
+
+    public function index()
+    {
+        return $this->fetch();
     }
 
-    public function test() {
-        /**
-        $t = new \my\Test();
-        $t->t();
-        import('my2/Test', EXTEND_PATH);
-        $t2 = new \Test();
-        $t2->t();
-        dump(config());
-        dump(url('index/blog/read?id=5'));
-         * 
-         */
-        import('phpqrcode/phpqrcode',EXTEND_PATH);
-        
-        \QRcode::png("php"); 
-        
-        
+    public function test()
+    {
+        //   Loader::import('@.utils.UtilsNet');
+        $fetch = new UtilsNet();
+        echo $fetch->fetch_alt_ip();
+        //   echo UtilsNet::fetch_alt_ip();
+
+
     }
-    
-    public function test2(){
-        echo '<img src="http://admin.0532888.co/index/index/test">';
+
+    public function test2()
+    {
+        echo 'test2';
     }
 
 }

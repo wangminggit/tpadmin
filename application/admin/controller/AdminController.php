@@ -3,9 +3,7 @@
 /**
  *  后台继承类
  * @file   Admin.php  
- * @date   2016-8-23 19:45:21 
- * @author Zhenxun Du<5552123@qq.com>  
- * @version    SVN:$Id:$ 
+ * @date   2016-8-23 19:45:21
  */
 
 namespace application\admin\controller;

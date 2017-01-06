@@ -103,6 +103,10 @@ return [
     'var_ajax'               => '_ajax',
     // 表单pjax伪装变量
     'var_pjax'               => '_pjax',
+    // 是否开启请求缓存 true自动缓存 支持设置请求缓存规则
+    'request_cache'          => false,
+    // 请求缓存有效期
+    'request_cache_expire'   => null,
 
     // +----------------------------------------------------------------------
     // | 模板设置
@@ -111,7 +115,9 @@ return [
     'template'               => [
         // 模板引擎类型 支持 php think 支持扩展
         'type'         => 'Think',
-        // 模板路径
+        // 视图基础目录，配置目录为所有模块的视图起始目录
+        'view_base'    => '',
+        // 当前模板的视图目录 留空为自动获取
         'view_path'    => '',
         // 模板后缀
         'view_suffix'  => 'html',

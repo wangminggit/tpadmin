@@ -3,9 +3,7 @@
 /**
  *  布居
  * @file   menu.php  
- * @date   2016-9-2 16:18:45 
- * @author Zhenxun Du<5552123@qq.com>  
- * @version    SVN:$Id:$ 
+ * @date   2016-9-2 16:18:45
  */
 
 namespace application\admin\widget;
